@@ -84,7 +84,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -348,6 +349,10 @@ template {
   grid-area: img;
 }
 
+.body {
+  background-color: red;
+}
+
 /* =============
     Typography
 ============= */
@@ -380,4 +385,22 @@ textarea {
 ============= */
 /* =============
     Footer
+============= */
+/* =============
+    divider
+============= */
+.divider .container .content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "h2 img" "a img";
+}
+.divider .container a {
+  grid-area: a;
+}
+.divider .container img {
+  grid-area: img;
+}
+
+/* =============
+    Typography
 ============= */

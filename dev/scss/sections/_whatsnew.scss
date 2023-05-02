@@ -1,0 +1,16 @@
+/* =============
+    What's new
+============= */
+
+.whatsnew{
+    ul{
+        @include md{
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+        }
+    }
+
+        @include xl{
+            grid-template-columns: repeat{6, 1fr};
+        }
+}
