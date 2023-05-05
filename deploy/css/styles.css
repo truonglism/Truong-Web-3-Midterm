@@ -84,7 +84,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -319,10 +320,10 @@ template {
   display: none;
 }
 
-/* =============
+/* =============Base
     Base
 ============= */
-.large.images {
+.large-images {
   width: 100%;
 }
 
@@ -331,8 +332,17 @@ template {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". content .";
 }
-
-.content {
+@media (min-width: 1200px) {
+  .container {
+    grid-template-columns: auto 1140px auto;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    grid-template-columns: auto 1320px auto;
+  }
+}
+.container .content {
   grid-area: content;
 }
 
@@ -369,3 +379,173 @@ textarea {
 /* =============
     Footer
 ============= */
+@media (min-width: 768px) {
+  footer .content {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "location newsletter" "location follow";
+  }
+}
+@media (min-width: 992px) {
+  footer .content {
+    grid-template-columns: repreat(3, 1fr);
+    grid-template-areas: "locations newsletter social";
+  }
+}
+@media (min-width: 768px) {
+  footer .content .location {
+    grid-area: locations;
+  }
+}
+@media (min-width: 768px) {
+  footer .content .newsletter {
+    grid-area: newsletter;
+  }
+}
+@media (min-width: 768px) {
+  footer .content .follow {
+    grid-area: follow;
+  }
+}
+
+/* =============
+    divider
+============= */
+.divider .container .content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "h2 img" "a img";
+}
+.divider .container a {
+  grid-area: a;
+}
+.divider .container img {
+  grid-area: img;
+}
+
+@media (min-width: 768px) {
+  .hero .hero-content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+}
+@media (min-width: 992px) {
+  .hero .hero-content {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media (min-width: 992px) {
+  .hero .hero-content-left.container {
+    grid-template-columns: auto auto 16px;
+  }
+}
+@media (min-width: 992px) {
+  .hero .hero-content-right.container {
+    grid-template-columns: auto auto 16px; /*need to be fixed */
+  }
+}
+
+/* =============
+    Request
+============= */
+@media (min-width: 768px) {
+  .whats-new {
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-columns: ". articles .";
+  }
+}
+@media (min-width: 768px) {
+  .whats-new {
+    grid-template-columns: auto 1140px auto;
+  }
+}
+@media (min-width: 1400px) {
+  .whats-new {
+    grid-template-columns: auto 1320px auto;
+  }
+}
+@media (min-width: 768px) {
+  .whats-new ul.article-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: articles;
+    grid-template-areas: "a1 a1 a2 a2" "a3 a3 a4 a4" ". a5 a5 .";
+  }
+}
+@media (min-width: 992px) {
+  .whats-new ul.article-grid {
+    grid-template-columns: repreat(6, 1fr);
+    grid-template-areas: "a1 a1 a2 a2 a3 a3" ". a4 a4 a5 a5 .";
+  }
+}
+@media (min-width: 1200px) {
+  .whats-new ul.article-grid li .container {
+    grid-template-columns: 15px auto;
+  }
+}
+@media (min-width: 768px) {
+  .whats-new ul.article-grid li.article-1 {
+    grid-area: a1;
+  }
+}
+@media (min-width: 768px) {
+  .whats-new ul.article-grid li.article-2 {
+    grid-area: a2;
+  }
+}
+@media (min-width: 768px) {
+  .whats-new ul.article-grid li.article-3 {
+    grid-area: a3;
+  }
+}
+@media (min-width: 768px) {
+  .whats-new ul.article-grid li.article-4 {
+    grid-area: a4;
+  }
+}
+@media (min-width: 768px) {
+  .whats-new ul.article-grid li.article-5 {
+    grid-area: a5;
+  }
+}
+
+/* =============
+   gallery
+============= */
+@media (min-width: 768px) {
+  .gallery ul {
+    display: grid;
+    grid-template-columns: 50% auto;
+  }
+}
+@media (min-width: 768px) {
+  .gallery ul {
+    grid-template-columns: 60% auto;
+  }
+}
+@media (min-width: 992px) {
+  .gallery ul {
+    grid-template-columns: 60% auto;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery ul {
+    grid-template-areas: "g1 g2" "g1 g3";
+  }
+}
+@media (min-width: 1200px) {
+  .gallery ul li.img-1 {
+    grid-area: g1;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery ul li.img-2 {
+    grid-area: g2;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery ul li.img-3 {
+    grid-area: g3;
+  }
+}

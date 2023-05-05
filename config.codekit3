@@ -388,18 +388,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/deploy\/styles.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/deploy\/styles-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/dev\/index.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -427,7 +415,7 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/deploy\/styles.css",
       "oF" : 3,
       "oS" : 0,
@@ -644,18 +632,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/dev\/scss\/styles.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/dev\/scss\/styles-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/dev\/scss\/styles.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -665,11 +641,19 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/styles.css",
+      "oAP" : "\/deploy\/css\/styles.css",
       "oF" : 3,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/README.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/README.html",
+      "oF" : 0
     },
     "\/README.md" : {
       "cB" : 0,
@@ -682,7 +666,7 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/README.html",
-      "oF" : 0,
+      "oF" : 1,
       "oFM" : 0,
       "oS" : 0,
       "pHT" : 0,
