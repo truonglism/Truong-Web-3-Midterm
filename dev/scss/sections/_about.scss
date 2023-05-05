@@ -18,5 +18,11 @@
         }
 
     } 
+    .hero-content-right.container{
+        @include lg{
+        grid-template-columns: auto auto 16px; /*need to be fixed */
+        }
+
+    } 
 }
    

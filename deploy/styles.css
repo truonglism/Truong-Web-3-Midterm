@@ -439,6 +439,11 @@ textarea {
     grid-template-columns: auto auto 16px;
   }
 }
+@media (min-width: 992px) {
+  .hero .hero-content-right.container {
+    grid-template-columns: auto auto 16px; /*need to be fixed */
+  }
+}
 
 /* =============
     Request
@@ -509,38 +514,38 @@ textarea {
    gallery
 ============= */
 @media (min-width: 768px) {
-  .whatsnew ul {
+  .gallery ul {
     display: grid;
     grid-template-columns: 50% auto;
   }
 }
 @media (min-width: 768px) {
-  .whatsnew ul {
+  .gallery ul {
     grid-template-columns: 60% auto;
   }
 }
 @media (min-width: 992px) {
-  .whatsnew ul {
+  .gallery ul {
     grid-template-columns: 60% auto;
   }
 }
 @media (min-width: 1200px) {
-  .whatsnew ul {
+  .gallery ul {
     grid-template-areas: "g1 g2" "g1 g3";
   }
 }
 @media (min-width: 1200px) {
-  .whatsnew ul li.img-1 {
+  .gallery ul li.img-1 {
     grid-area: g1;
   }
 }
 @media (min-width: 1200px) {
-  .whatsnew ul li.img-2 {
+  .gallery ul li.img-2 {
     grid-area: g2;
   }
 }
 @media (min-width: 1200px) {
-  .whatsnew ul li.img-3 {
+  .gallery ul li.img-3 {
     grid-area: g3;
   }
 }

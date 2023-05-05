@@ -2,7 +2,7 @@
    gallery
 ============= */
 
-.whatsnew{
+.gallery{
     ul{
         @include md{
             display: grid;
@@ -16,7 +16,7 @@
         @include lg{
             grid-template-columns: 60% auto;
         }
-        
+
         @include xl{
             grid-template-areas:
             "g1 g2"
