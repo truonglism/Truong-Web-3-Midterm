@@ -1,16 +1,77 @@
 /* =============
-    What's new
+    Request
 ============= */
 
-.whatsnew{
-    ul{
-        @include md{
-            display: grid;
-            grid-template-columns: 1fr 1fr ;
-        }
+
+.whats-new{
+    @include md{
+        display: grid;
+        grid-template-columns: 15px auto 15px;
+        grid-template-columns: ". articles .";
     }
 
-        @include xl{
-            grid-template-columns: repeat{6, 1fr};
+    @include md{
+      grid-template-columns: auto 1140px auto;
+    }
+
+    @include xxl{
+        grid-template-columns: auto 1320px auto;
+      }
+
+    ul.article-grid{
+        @include md{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-area: articles;
+            grid-template-areas:
+            "a1 a1 a2 a2"
+            "a3 a3 a4 a4"
+            ". a5 a5 .";
         }
+
+        @include lg{
+            grid-template-columns: repreat(6,1fr);
+            grid-template-areas: 
+            "a1 a1 a2 a2 a3 a3"
+            ". a4 a4 a5 a5 ."; 
+            
+        }
+
+        li{
+            .container{
+                @include xl{
+                    grid-template-columns: 15px auto;
+                }
+            }
+            &.article-1{
+                @include md{
+                    grid-area: a1;
+                }
+            }
+
+            &.article-2{
+                @include md{
+                    grid-area: a2;
+                }
+            }
+
+            &.article-3{
+                @include md{
+                    grid-area: a3;
+                }
+            }
+
+            &.article-4{
+                @include md{
+                    grid-area: a4;
+                }
+            }
+
+            &.article-5{
+                @include md{
+                    grid-area: a5;
+                }
+            }
+        }
+    }  
 }

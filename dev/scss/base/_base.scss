@@ -12,34 +12,20 @@
     grid-template-areas:
     ". content ."
     ;
-}
-
-.content{
-    grid-area:content;
-}
 
 
-.divider{
-    .container{
-
-        .content{
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-areas:
-            "h2 img"
-            "a img"
-            ;
-        }
-        a{
-            grid-area: a;
-        }
-        img{
-            grid-area: img;
-        }
+    @include xl{
+        grid-template-columns: auto 1140px auto;
     }
+    @include xxl{
+        grid-template-columns: auto 1320px auto;
+    }
+
+    .content{
+        grid-area:content;
+    }
+
 }
 
-.body{
-    background-color:red
-}
+
 
