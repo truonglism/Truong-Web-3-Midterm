@@ -411,18 +411,62 @@ textarea {
 /* =============
     divider
 ============= */
+@media (min-width: 768px) {
+  .divider {
+    display: grid;
+    grid-template-columns: 15px 1fr 1fr 15px;
+    grid-template-areas: ". box-1 box-2 .";
+  }
+}
+@media (min-width: 1200px) {
+  .divider {
+    grid-template-columns: auto 570px 570px auto;
+  }
+}
+@media (min-width: 1400px) {
+  .divider {
+    grid-template-columns: auto 660px 660px auto;
+  }
+}
+@media (min-width: 1200px) {
+  .divider .container {
+    grid-template-columns: 16px auto 16px;
+  }
+}
+.divider .container.box-1 {
+  background-color: #BBC3E7;
+}
+@media (min-width: 768px) {
+  .divider .container.box-1 {
+    grid-area: box-1;
+  }
+}
+.divider .container.box-2 {
+  background-color: #BBC3E7;
+}
+@media (min-width: 768px) {
+  .divider .container.box-2 {
+    grid-area: box-2;
+  }
+}
 .divider .container .content {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: "h2 img" "a img";
 }
-.divider .container a {
+.divider .container .content h2 {
+  grid-area: h2;
+}
+.divider .container .content a {
   grid-area: a;
 }
-.divider .container img {
+.divider .container .content img {
   grid-area: img;
 }
 
+/* =============
+    hero
+============= */
 @media (min-width: 768px) {
   .hero .hero-content {
     display: grid;
@@ -434,10 +478,18 @@ textarea {
     grid-template-columns: 50% 50%;
   }
 }
+.hero .hero-content-left.container {
+  background-color: #000000;
+  color: #FFFFFF;
+}
 @media (min-width: 992px) {
   .hero .hero-content-left.container {
     grid-template-columns: auto auto 16px;
   }
+}
+.hero .hero-content-right.container {
+  background-color: #D3D3D3;
+  color: #424B54;
 }
 @media (min-width: 992px) {
   .hero .hero-content-right.container {

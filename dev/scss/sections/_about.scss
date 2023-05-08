@@ -1,4 +1,6 @@
-
+/* =============
+    hero
+============= */
 
 
 .hero{
@@ -16,13 +18,18 @@
         @include lg{
         grid-template-columns: auto auto 16px;
         }
+        background-color: #000000;
+        color: #FFFFFF;
 
     } 
     .hero-content-right.container{
         @include lg{
         grid-template-columns: auto auto 16px; /*need to be fixed */
         }
-
+        background-color: #D3D3D3;
+        color:#424B54
     } 
 }
+
+
    
