@@ -228,6 +228,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/deploy\/img\/Logo\/facebook3.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/Logo\/facebook3.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/deploy\/img\/Logo\/help.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -253,6 +263,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/deploy\/img\/Logo\/instagram.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/Logo\/instagramf.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/Logo\/instagramf.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -328,11 +348,31 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/deploy\/img\/Logo\/twitterd.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/Logo\/twitterd.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/deploy\/img\/Logo\/youtube.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/deploy\/img\/Logo\/youtube.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/Logo\/youtubes.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/Logo\/youtubes.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,

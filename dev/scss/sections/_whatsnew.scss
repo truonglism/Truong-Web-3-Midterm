@@ -1,9 +1,11 @@
 /* =============
-    Request
+   whatsnew
 ============= */
 
 
 .whats-new{
+    margin-top: 55px;
+    margin-bottom: 64px;
     @include md{
         display: grid;
         grid-template-columns: 15px auto 15px;
@@ -38,6 +40,8 @@
         }
 
         li{
+            margin: 16px;
+            
             .container{
                 @include xl{
                     grid-template-columns: 15px auto;

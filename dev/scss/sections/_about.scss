@@ -20,14 +20,18 @@
         }
         background-color: #000000;
         color: #FFFFFF;
+        padding: 12px;
 
     } 
     .hero-content-right.container{
         @include lg{
         grid-template-columns: auto auto 16px; /*need to be fixed */
         }
+        padding: 12px;
         background-color: #D3D3D3;
         color:#424B54
+        
+        
     } 
 }
 

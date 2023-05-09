@@ -373,12 +373,32 @@ textarea {
 /* =============
     Navigation
 ============= */
+.search {
+  background-color: #6C7FD3;
+}
+
 /* =============
     Header
 ============= */
+header {
+  padding-top: 25px;
+  padding-bottom: 12px;
+}
+header .logo {
+  text-align: left;
+}
+header .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 16px 0px;
+}
+
 /* =============
     Footer
 ============= */
+footer .content {
+  background-color: #BBC3E7;
+}
 @media (min-width: 768px) {
   footer .content {
     display: grid;
@@ -391,6 +411,9 @@ textarea {
     grid-template-columns: repreat(3, 1fr);
     grid-template-areas: "locations newsletter social";
   }
+}
+footer .content .location {
+  color: #FFFFFF;
 }
 @media (min-width: 768px) {
   footer .content .location {
@@ -435,6 +458,12 @@ textarea {
 }
 .divider .container.box-1 {
   background-color: #BBC3E7;
+  color: #FFFFFF;
+  padding-top: 12px;
+  margin-top: 24px;
+  margin-bottom: 64px;
+  width: 487px;
+  height: 145px;
 }
 @media (min-width: 768px) {
   .divider .container.box-1 {
@@ -443,6 +472,12 @@ textarea {
 }
 .divider .container.box-2 {
   background-color: #BBC3E7;
+  color: #FFFFFF;
+  margin-top: 24px;
+  margin-bottom: 64px;
+  padding-top: 12px;
+  width: 487px;
+  height: 145px;
 }
 @media (min-width: 768px) {
   .divider .container.box-2 {
@@ -481,6 +516,7 @@ textarea {
 .hero .hero-content-left.container {
   background-color: #000000;
   color: #FFFFFF;
+  padding: 12px;
 }
 @media (min-width: 992px) {
   .hero .hero-content-left.container {
@@ -488,6 +524,7 @@ textarea {
   }
 }
 .hero .hero-content-right.container {
+  padding: 12px;
   background-color: #D3D3D3;
   color: #424B54;
 }
@@ -498,8 +535,12 @@ textarea {
 }
 
 /* =============
-    Request
+   whatsnew
 ============= */
+.whats-new {
+  margin-top: 55px;
+  margin-bottom: 64px;
+}
 @media (min-width: 768px) {
   .whats-new {
     display: grid;
@@ -530,6 +571,9 @@ textarea {
     grid-template-columns: repreat(6, 1fr);
     grid-template-areas: "a1 a1 a2 a2 a3 a3" ". a4 a4 a5 a5 .";
   }
+}
+.whats-new ul.article-grid li {
+  margin: 16px;
 }
 @media (min-width: 1200px) {
   .whats-new ul.article-grid li .container {
@@ -591,10 +635,18 @@ textarea {
     grid-area: g1;
   }
 }
+.gallery ul li.img-2 {
+  left: 820px;
+  top: 1381px;
+}
 @media (min-width: 1200px) {
   .gallery ul li.img-2 {
     grid-area: g2;
   }
+}
+.gallery ul li.img-3 {
+  left: 820px;
+  top: 1799px;
 }
 @media (min-width: 1200px) {
   .gallery ul li.img-3 {

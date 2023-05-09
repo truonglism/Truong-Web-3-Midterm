@@ -3,7 +3,9 @@
 ============= */
 
 footer{
+   
     .content{
+        background-color: #BBC3E7;
         @include md{
             display: grid;
             grid-template-columns: 50% auto;
@@ -22,10 +24,12 @@ footer{
             @include md{
                 grid-area: locations;
             }
+            color: #FFFFFF;
         }
         
         .newsletter{
             @include md{
+                
                 grid-area: newsletter;
 
             }

@@ -35,12 +35,16 @@
                 @include xl{
                     grid-area: g2;
                 }
+                left: 820px;
+                top: 1381px;
             }
 
             &.img-3{
                 @include xl{
                     grid-area: g3;
                 }
+                left: 820px;
+                top: 1799px;    
 
             }
         }
