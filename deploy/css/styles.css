@@ -373,8 +373,18 @@ textarea {
 /* =============
     Navigation
 ============= */
-.search {
+.containersearch {
   background-color: #6C7FD3;
+  padding: 24px;
+}
+
+.icon {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.iconbutton {
+  margin-left: 550px;
 }
 
 /* =============
@@ -635,18 +645,10 @@ footer .content .location {
     grid-area: g1;
   }
 }
-.gallery ul li.img-2 {
-  left: 820px;
-  top: 1381px;
-}
 @media (min-width: 1200px) {
   .gallery ul li.img-2 {
     grid-area: g2;
   }
-}
-.gallery ul li.img-3 {
-  left: 820px;
-  top: 1799px;
 }
 @media (min-width: 1200px) {
   .gallery ul li.img-3 {
