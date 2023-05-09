@@ -395,7 +395,8 @@ header {
   padding-bottom: 12px;
 }
 header .logo {
-  text-align: left;
+  margin-left: 26px;
+  margin-top: 22px;
 }
 header .content {
   display: grid;
