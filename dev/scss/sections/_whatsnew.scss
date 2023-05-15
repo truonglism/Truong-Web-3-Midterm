@@ -2,80 +2,84 @@
    whatsnew
 ============= */
 
-
 .whats-new{
-    margin-top: 55px;
-    margin-bottom: 64px;
-    @include md{
-        display: grid;
-        grid-template-columns: 15px auto 15px;
-        grid-template-columns: ". articles .";
-    }
 
-    @include md{
-      grid-template-columns: auto 1140px auto;
-    }
-
-    @include xxl{
-        grid-template-columns: auto 1320px auto;
-      }
-
-    ul.article-grid{
+    .whats-new-articles{
+        margin: 0 0 20px 0;
         @include md{
             display: grid;
-            grid-template-columns: repeat(4,1fr);
-            grid-area: articles;
-            grid-template-areas:
-            "a1 a1 a2 a2"
-            "a3 a3 a4 a4"
-            ". a5 a5 .";
+            grid-template-columns: 15px auto 15px;
+            grid-template-areas: ". articles .";
         }
-
-        @include lg{
-            grid-template-columns: repreat(6,1fr);
-            grid-template-areas: 
-            "a1 a1 a2 a2 a3 a3"
-            ". a4 a4 a5 a5 ."; 
-            
+    
+        @include md{
+          grid-template-columns: auto 1140px auto;
         }
-
-        li{
-            margin: 16px;
-            
-            .container{
-                @include xl{
-                    grid-template-columns: 15px auto;
+    
+        @include xxl{
+            grid-template-columns: auto 1320px auto;
+          }
+    
+        ul.article-grid{
+            list-style: none;
+            @include md{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-area: articles;
+                grid-template-areas:
+                "a1 a1 a2 a2"
+                "a3 a3 a4 a4"
+                ". a5 a5 .";
+            }
+    
+            @include lg{
+                grid-template-columns: repeat(6,1fr);
+                grid-template-areas: 
+                "a1 a1 a2 a2 a3 a3"
+                ". a4 a4 a5 a5 ."; 
+                
+            }
+    
+            li{
+                margin: 16px;
+                
+                .container{
+                    @include xl{
+                        grid-template-columns: 15px auto;
+                    }
+                }
+                &.article-1{
+                    @include md{
+                        grid-area: a1;
+                    } 
+                }
+    
+                &.article-2{
+                    @include md{
+                        grid-area: a2;
+                    }
+                }
+    
+                &.article-3{
+                    @include md{
+                        grid-area: a3;
+                    }
+                }
+    
+                &.article-4{
+                    @include md{
+                        grid-area: a4;
+                    }
+                }
+    
+                &.article-5{
+                    @include md{
+                        grid-area: a5;
+                    }
                 }
             }
-            &.article-1{
-                @include md{
-                    grid-area: a1;
-                } 
-            }
+        }  
+    }
+    
 
-            &.article-2{
-                @include md{
-                    grid-area: a2;
-                }
-            }
-
-            &.article-3{
-                @include md{
-                    grid-area: a3;
-                }
-            }
-
-            &.article-4{
-                @include md{
-                    grid-area: a4;
-                }
-            }
-
-            &.article-5{
-                @include md{
-                    grid-area: a5;
-                }
-            }
-        }
-    }  
 }

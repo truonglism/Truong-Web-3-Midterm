@@ -4,6 +4,7 @@
 
 .gallery{
     ul{
+        list-style: none;
         @include md{
             display: grid;
             grid-template-columns: 50% auto ;
@@ -39,8 +40,10 @@
             }
 
             &.img-3{
+                display: none;
                 @include xl{
                     grid-area: g3;
+                    display: block;
                 }
                 
 
