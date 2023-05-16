@@ -4,36 +4,94 @@
 
 
 .hero{
+    img{
+        display: block;
+    }
     .hero-content{
-        @include md{
+        color: $white;
+
+        a{
+          color: $white;
+          text-decoration: none;
+        img{
+            display: inline-block;
+
+            }     
+        }
+
+    @include md{
             display: grid;
             grid-template-columns: 40% 60%;
         }
 
-        @include lg{
+    @include lg{
             grid-template-columns: 50% 50%;
+    }
+
+    .container{
+        .content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+            "div link";
+
+            .information{
+                grid-area: div;
+            }
+
+            a{
+                grid-area: link;
+                justify-self: end;
+                align-self: center;
+            }
+
+            span{
+                display: none;
+                @include lg{
+                    display: inline-block;
+                }
+            }
         }
-    }    
+    }
+     
     .hero-content-left.container{
-        @include lg{
-        grid-template-columns: auto auto 16px;
-        }
-        background-color: #000000;
-        color: #FFFFFF;
-        padding: 12px;
+        background-color: $black;
+        padding: 20px;
 
+        @include lg{
+            grid-template-columns: auto auto 16px;
+            }
+        p{
+            margin-bottom: 10px;
+            font-weight:400 ;
+        }
+        h2{
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+
+            @include lg{
+                font-size: 24px;
+            }
+        }
     } 
+
     .hero-content-right.container{
-        @include lg{
-        grid-template-columns: auto auto 16px; /*need to be fixed */
-        }
-        padding: 12px;
-        background-color: #D3D3D3;
-        color:#424B54
-        
-        
-    } 
-}
+        background-color: $gray;
+        color: $darkgray;
+        padding: 20px;
 
+        @include lg{
+        grid-template-columns: 16px auto auto; 
+        }
+       
+        p{
+           margin-bottom: 10px; 
+           font-weight:400 ;
+        }
+    } 
+       
+  } 
+}
 
    

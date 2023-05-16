@@ -3,16 +3,19 @@
 ============= */
 
 footer{
-   
+    background-color:$lightpurple;
+    padding-top: 20px;
+    
     .content{
       
-        background-color: #BBC3E7;
+
         @include md{
             display: grid;
             grid-template-columns: 50% auto;
             grid-template-areas: 
             "location newsletter"
             "location follow";   
+            gap: 20px;
         }
 
         @include lg{
@@ -20,12 +23,56 @@ footer{
             grid-template-areas: 
             "locations newsletter follow";
         }
+        h4{
+            font-size: 20px;
+            color: $white;
+        }
+
+        .location, .follow{
+            ul{
+                list-style: none;
+                padding: 0;
+            }
+
+            img{
+                padding-right: 10px;
+            }
+
+            h5{
+                font-size: 16px;
+                margin-bottom: 15px;
+
+            }
+
+            p{
+                font-size: 12px;
+                margin-bottom: 15px;
+                span{
+                    display: inline-block;
+                }
+
+            }
+
+            .border-bottom{
+                border-bottom: 2px solid $white;
+                margin: 25px 0 25px 0;
+            }
+
+            
+
+        }
+
+        
 
         .location{
             @include md{
                 grid-area: locations;
             }
-            color: #FFFFFF;
+            ul{
+                li{
+                    color: $black;
+                }
+            }
         }
         
         .newsletter{
@@ -34,11 +81,71 @@ footer{
                 grid-area: newsletter;
 
             }
+            form{
+                display: flex;
+                flex-flow: wrap;
+                justify-content: end;
+
+                input{
+                    width: 100%;
+                    background: $white;
+                    color: $black;
+                    padding: 15px 10px 15px 10px;
+                    margin: 20px 0 20px 0;
+                    border: none;
+
+                }
+                ::placeholder{
+                    color: $gray;
+                    opacity: 1;
+
+                }
+                ::-ms-input-placeholder{
+                    color: $gray;
+                }
+            }
+
+            button{
+                color: $white;
+                background-color: $black;
+                padding: 10px 20px 10px 20px;
+                text-decoration: none;
+                text-align: center;
+                border: none;
+            }
         }
+    
         .follow{
             @include md{
                 grid-area: follow;
             }
+            @include lg{
+                text-align: right;
+
+            }
+
+            ul li{
+                display: inline-block;
+
+                a{
+                    color: $white;
+                    i{
+                        font-size: 30px;
+                        padding-right: 15px;
+
+                    }
+                }
+
+                @include lg{
+                    &:last-of-type{
+                        a i{
+                            padding-right: 0;
+                        }
+                    }
+                }
+
+            }
         }
     }
 }
+

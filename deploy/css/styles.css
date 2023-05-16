@@ -354,6 +354,18 @@ ul {
 /* =============
     Typography
 ============= */
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-weight: 700;
+}
+
 /* =============
     Buttons
 ============= */
@@ -380,24 +392,76 @@ textarea {
 ============= */
 .containersearch {
   background-color: #6C7FD3;
-  padding: 24px;
+  margin: 25px 0 25px 0;
 }
-
-.icon {
-  padding-left: 16px;
-  padding-right: 16px;
+.containersearch .content {
+  font-weight: 100;
 }
-
-.iconbutton {
-  margin-left: 550px;
+.containersearch .content form {
+  display: flex;
+}
+.containersearch .content form input {
+  color: #fff;
+  background-color: #6C7FD3;
+  font-size: 14px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+@media (min-width: 768px) {
+  .containersearch .content form input {
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .containersearch .content form input {
+    font-size: 35px;
+  }
+}
+.containersearch .content form ::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+  font-weight: 400;
+}
+.containersearch .content form ::-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+  font-weight: 400;
+}
+.containersearch .content form ::placeholder {
+  color: #fff;
+  opacity: 1;
+  font-weight: 400;
+}
+.containersearch .content form ::-ms-input-placeholder {
+  color: #fff;
+}
+.containersearch .content form button {
+  background-color: #6C7FD3;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 7.5px 12.5px 10px 15px;
+}
+@media (min-width: 768px) {
+  .containersearch .content form button {
+    padding: 10px 15px 10px 15px;
+  }
+}
+.containersearch .content form button img {
+  width: 25px;
+}
+@media (min-width: 768px) {
+  .containersearch .content form button img {
+    width: 30px;
+  }
 }
 
 /* =============
     Header
 ============= */
 header {
-  padding-top: 25px;
-  padding-bottom: 12px;
+  background-color: #fff;
 }
 header .logo {
   margin-left: 26px;
@@ -408,18 +472,32 @@ header .content {
   grid-template-columns: 1fr 1fr;
   padding: 16px 0px;
 }
+header .content div {
+  margin: 20px 0 20px 0px;
+}
+@media (min-width: 768px) {
+  header .content div {
+    margin: 25px 0 25 px 0px;
+  }
+}
+header .content img {
+  width: 48px;
+  padding-right: 0.5rem;
+}
 
 /* =============
     Footer
 ============= */
-footer .content {
+footer {
   background-color: #BBC3E7;
+  padding-top: 20px;
 }
 @media (min-width: 768px) {
   footer .content {
     display: grid;
     grid-template-columns: 50% auto;
     grid-template-areas: "location newsletter" "location follow";
+    gap: 20px;
   }
 }
 @media (min-width: 992px) {
@@ -428,28 +506,118 @@ footer .content {
     grid-template-areas: "locations newsletter follow";
   }
 }
-footer .content .location {
-  color: #FFFFFF;
+footer .content h4 {
+  font-size: 20px;
+  color: #fff;
+}
+footer .content .location ul, footer .content .follow ul {
+  list-style: none;
+  padding: 0;
+}
+footer .content .location img, footer .content .follow img {
+  padding-right: 10px;
+}
+footer .content .location h5, footer .content .follow h5 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+footer .content .location p, footer .content .follow p {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+footer .content .location p span, footer .content .follow p span {
+  display: inline-block;
+}
+footer .content .location .border-bottom, footer .content .follow .border-bottom {
+  border-bottom: 2px solid #fff;
+  margin: 25px 0 25px 0;
 }
 @media (min-width: 768px) {
   footer .content .location {
     grid-area: locations;
   }
 }
+footer .content .location ul li {
+  color: #000;
+}
 @media (min-width: 768px) {
   footer .content .newsletter {
     grid-area: newsletter;
   }
+}
+footer .content .newsletter form {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: end;
+}
+footer .content .newsletter form input {
+  width: 100%;
+  background: #fff;
+  color: #000;
+  padding: 15px 10px 15px 10px;
+  margin: 20px 0 20px 0;
+  border: none;
+}
+footer .content .newsletter form ::-webkit-input-placeholder {
+  color: #D3D3D3;
+  opacity: 1;
+}
+footer .content .newsletter form ::-moz-placeholder {
+  color: #D3D3D3;
+  opacity: 1;
+}
+footer .content .newsletter form ::placeholder {
+  color: #D3D3D3;
+  opacity: 1;
+}
+footer .content .newsletter form ::-ms-input-placeholder {
+  color: #D3D3D3;
+}
+footer .content .newsletter button {
+  color: #fff;
+  background-color: #000;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
 }
 @media (min-width: 768px) {
   footer .content .follow {
     grid-area: follow;
   }
 }
+@media (min-width: 992px) {
+  footer .content .follow {
+    text-align: right;
+  }
+}
+footer .content .follow ul li {
+  display: inline-block;
+}
+footer .content .follow ul li a {
+  color: #fff;
+}
+footer .content .follow ul li a i {
+  font-size: 30px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  footer .content .follow ul li:last-of-type a i {
+    padding-right: 0;
+  }
+}
 
 /* =============
     divider
 ============= */
+.divider {
+  margin: 15px 0 0 0;
+}
+@media (min-width: 768px) {
+  .divider {
+    margin: 30px 0 30px 0;
+  }
+}
 @media (min-width: 768px) {
   .divider {
     display: grid;
@@ -473,27 +641,13 @@ footer .content .location {
   }
 }
 .divider .container.box-1 {
-  background-color: #BBC3E7;
-  color: #FFFFFF;
-  padding-top: 12px;
-  margin-top: 24px;
-  margin-bottom: 64px;
-  width: 487px;
-  height: 145px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   .divider .container.box-1 {
     grid-area: box-1;
+    margin-bottom: 0;
   }
-}
-.divider .container.box-2 {
-  background-color: #BBC3E7;
-  color: #FFFFFF;
-  margin-top: 24px;
-  margin-bottom: 64px;
-  padding-top: 12px;
-  width: 487px;
-  height: 145px;
 }
 @media (min-width: 768px) {
   .divider .container.box-2 {
@@ -504,20 +658,53 @@ footer .content .location {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: "h2 img" "a img";
+  background-color: #BBC3E7;
+  color: #fff;
+  padding: 20px;
 }
 .divider .container .content h2 {
   grid-area: h2;
+  align-self: center;
+  font-size: 22px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .divider .container .content h2 {
+    font-size: 28px;
+  }
 }
 .divider .container .content a {
   grid-area: a;
+  align-self: end;
+  color: #fff;
+  background-color: #000;
+  padding: 10px;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
 }
 .divider .container .content img {
   grid-area: img;
+  justify-self: end;
 }
 
 /* =============
     hero
 ============= */
+.hero img {
+  display: block;
+}
+.hero .hero-content {
+  color: #fff;
+}
+.hero .hero-content a {
+  color: #fff;
+  text-decoration: none;
+}
+.hero .hero-content a img {
+  display: inline-block;
+}
 @media (min-width: 768px) {
   .hero .hero-content {
     display: grid;
@@ -529,32 +716,96 @@ footer .content .location {
     grid-template-columns: 50% 50%;
   }
 }
-.hero .hero-content-left.container {
-  background-color: #000000;
-  color: #FFFFFF;
-  padding: 12px;
+.hero .hero-content .container .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "div link";
+}
+.hero .hero-content .container .content .information {
+  grid-area: div;
+}
+.hero .hero-content .container .content a {
+  grid-area: link;
+  justify-self: end;
+  align-self: center;
+}
+.hero .hero-content .container .content span {
+  display: none;
 }
 @media (min-width: 992px) {
-  .hero .hero-content-left.container {
+  .hero .hero-content .container .content span {
+    display: inline-block;
+  }
+}
+.hero .hero-content .hero-content-left.container {
+  background-color: #000;
+  padding: 20px;
+}
+@media (min-width: 992px) {
+  .hero .hero-content .hero-content-left.container {
     grid-template-columns: auto auto 16px;
   }
 }
-.hero .hero-content-right.container {
-  padding: 12px;
-  background-color: #D3D3D3;
-  color: #424B54;
+.hero .hero-content .hero-content-left.container p {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.hero .hero-content .hero-content-left.container h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 @media (min-width: 992px) {
-  .hero .hero-content-right.container {
-    grid-template-columns: auto auto 16px; /*need to be fixed */
+  .hero .hero-content .hero-content-left.container h2 {
+    font-size: 24px;
   }
+}
+.hero .hero-content .hero-content-right.container {
+  background-color: #D3D3D3;
+  color: #424B54;
+  padding: 20px;
+}
+@media (min-width: 992px) {
+  .hero .hero-content .hero-content-right.container {
+    grid-template-columns: 16px auto auto;
+  }
+}
+.hero .hero-content .hero-content-right.container p {
+  margin-bottom: 10px;
+  font-weight: 400;
 }
 
 /* =============
    whatsnew
 ============= */
-.whats-new .whats-new-articles {
+.whats-new {
   margin: 0 0 20px 0;
+}
+@media (min-width: 768px) {
+  .whats-new {
+    margin: 30px 0 40px 0;
+  }
+}
+@media (min-width: 992px) {
+  .whats-new {
+    margin: 50px 0 60px 0;
+  }
+}
+.whats-new .what-new-title h2 {
+  font-size: 20px;
+  font-weight: 300;
+  color: grey;
+  padding: 10px 0 10px 0;
+}
+@media (min-width: 992px) {
+  .whats-new .what-new-title h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .whats-new .what-new-title h2 {
+    font-size: 40px;
+  }
 }
 @media (min-width: 768px) {
   .whats-new .whats-new-articles {
@@ -575,6 +826,10 @@ footer .content .location {
 }
 .whats-new .whats-new-articles ul.article-grid {
   list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 15px;
 }
 @media (min-width: 768px) {
   .whats-new .whats-new-articles ul.article-grid {
@@ -591,12 +846,26 @@ footer .content .location {
   }
 }
 .whats-new .whats-new-articles ul.article-grid li {
-  margin: 16px;
+  background-color: #fff;
 }
 @media (min-width: 1200px) {
   .whats-new .whats-new-articles ul.article-grid li .container {
     grid-template-columns: 15px auto;
   }
+}
+.whats-new .whats-new-articles ul.article-grid li .container h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.whats-new .whats-new-articles ul.article-grid li .container p {
+  padding-bottom: 25px;
+}
+.whats-new .whats-new-articles ul.article-grid li .container a {
+  color: #fff;
+  background-color: #000;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .whats-new .whats-new-articles ul.article-grid li.article-1 {
@@ -629,6 +898,7 @@ footer .content .location {
 ============= */
 .gallery ul {
   list-style: none;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .gallery ul {

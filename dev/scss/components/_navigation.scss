@@ -2,15 +2,63 @@
     Navigation
 ============= */
 .containersearch{
-    background-color: #6C7FD3;
-    padding: 24px;
+    background-color: $purple;
+    margin: 25px 0 25px 0;
+
+    .content{
+        font-weight:100;
+        form{
+            display: flex;
+            input{
+                color: $white;
+                background-color: $purple;
+                font-size: 14px;
+                width: 100%;
+                
+                
+
+                border:none;
+                border-bottom: 2px solid $white;
+
+                @include md{
+                    font-size: 30px;
+
+                }
+
+                @include lg{
+                    font-size: 35px;
+                    
+                }
+            }
+        ::placeholder{
+            color: $white;
+            opacity: 1;
+            font-weight:400;
+        }
+        ::-ms-input-placeholder{
+            color: $white;
+        }
+        
+        button{
+            background-color: $purple;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            padding: 7.5px 12.5px 10px 15px;
+
+            @include md{
+                padding: 10px 15px 10px 15px;
+            }
+
+            img{
+                width: 25px;
+
+                @include md{
+                    width: 30px;
+                }
+            }
+        }
+    }
+ }
 }
 
-.icon{
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-.iconbutton{
-    margin-left: 550px;
-}
