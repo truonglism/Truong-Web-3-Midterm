@@ -363,7 +363,11 @@ body {
 }
 
 h3 {
-  font-weight: 700;
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 500;
 }
 
 /* =============
@@ -682,7 +686,7 @@ footer .content .follow ul li a i {
   width: 100px;
   text-decoration: none;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
 }
 .divider .container .content img {
   grid-area: img;
@@ -794,8 +798,9 @@ footer .content .follow ul li a i {
 .whats-new .what-new-title h2 {
   font-size: 20px;
   font-weight: 300;
-  color: grey;
+  color: #D3D3D3;
   padding: 10px 0 10px 0;
+  font-weight: 500;
 }
 @media (min-width: 992px) {
   .whats-new .what-new-title h2 {
@@ -866,6 +871,7 @@ footer .content .follow ul li a i {
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   text-align: center;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .whats-new .whats-new-articles ul.article-grid li.article-1 {
