@@ -397,9 +397,7 @@ textarea {
 .containersearch {
   background-color: #6C7FD3;
   margin: 25px 0 25px 0;
-}
-.containersearch .content {
-  font-weight: 100;
+  padding: 10px;
 }
 .containersearch .content form {
   display: flex;
@@ -528,9 +526,10 @@ footer .content .location h5, footer .content .follow h5 {
 footer .content .location p, footer .content .follow p {
   font-size: 12px;
   margin-bottom: 15px;
+  display: flex;
 }
 footer .content .location p span, footer .content .follow p span {
-  display: inline-block;
+  display: flex;
 }
 footer .content .location .border-bottom, footer .content .follow .border-bottom {
   border-bottom: 2px solid #fff;
