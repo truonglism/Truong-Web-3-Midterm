@@ -81,6 +81,10 @@
         color: $darkgray;
         padding: 20px;
 
+        .content{
+            align-self: center;
+        }
+
         @include lg{
         grid-template-columns: 16px auto auto; 
         }

@@ -768,6 +768,9 @@ footer .content .follow ul li a i {
   color: #424B54;
   padding: 20px;
 }
+.hero .hero-content .hero-content-right.container .content {
+  align-self: center;
+}
 @media (min-width: 992px) {
   .hero .hero-content .hero-content-right.container {
     grid-template-columns: 16px auto auto;
@@ -818,7 +821,7 @@ footer .content .follow ul li a i {
     grid-template-areas: ". articles .";
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .whats-new .whats-new-articles {
     grid-template-columns: auto 1140px auto;
   }
