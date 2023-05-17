@@ -732,11 +732,11 @@ footer .content .follow ul li a i {
   justify-self: end;
   align-self: center;
 }
-.hero .hero-content .container .content span {
+.hero .hero-content .container .content a span {
   display: none;
 }
 @media (min-width: 992px) {
-  .hero .hero-content .container .content span {
+  .hero .hero-content .container .content a span {
     display: inline-block;
   }
 }

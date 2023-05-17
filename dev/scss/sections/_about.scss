@@ -43,14 +43,18 @@
                 grid-area: link;
                 justify-self: end;
                 align-self: center;
-            }
 
-            span{
-                display: none;
-                @include lg{
-                    display: inline-block;
-                }
+                span{
+                    display: none;
+                    @include lg{
+                   
+                        display: inline-block;  
+    
+                    }
             }
+        }
+          
+            
         }
     }
      
